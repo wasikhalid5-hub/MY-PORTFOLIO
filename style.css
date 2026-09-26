@@ -1,0 +1,709 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #333;
+    color: #f9f9f9;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #222;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: #007bff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 1.05rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #007bff;
+}
+
+.theme-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.theme-btn:hover {
+    background-color: #eee;
+}
+
+/* Hero Section & Side-by-Side Layout */
+.hero-section {
+    padding: 50px 8%;
+}
+
+.hero-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.hero-subtext {
+    font-size: 0.95rem !important;
+    color: #999 !important;
+}
+
+.highlight {
+    color: #007bff;
+}
+
+/* Code Box Styling */
+.code-box {
+    flex: 1;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.code-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.red { background-color: #ff5f56; }
+.dot.yellow { background-color: #ffbd2e; }
+.dot.green { background-color: #27c93f; }
+
+.file-name {
+    margin-left: 10px;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+.code-content {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: #d4d4d4;
+    overflow-x: auto;
+}
+
+.keyword { color: #569cd6; }
+.string { color: #ce9178; }
+.number { color: #b5cea8; }
+.tag { color: #4ec9b0; }
+
+.code-footer {
+    margin-top: 15px;
+    border-top: 1px solid #333;
+    padding-top: 10px;
+    font-style: italic;
+    font-size: 0.85rem;
+    color: #888;
+}
+
+
+/* Footer Styling */
+.footer {
+    background-color: #1e1e1e;
+    border-top: 1px solid #333;
+    padding: 25px 8%;
+    margin-top: 60px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #f9f9f9;
+    font-size: 1.3rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* About Section Styling */
+.about-section {
+    padding: 60px 8%;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.about-text {
+    flex: 1.2;
+    min-width: 300px;
+    text-align: left;
+}
+
+.about-text h2 {
+    font-size: 2.3rem;
+    margin-bottom: 20px;
+}
+
+.about-intro {
+    font-size: 1.15rem;
+    color: #ddd;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.about-text p {
+    font-size: 1rem;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Quick Facts Card (Right Side) */
+.about-card {
+    flex: 0.8;
+    min-width: 280px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.about-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    color: #fff;
+    border-bottom: 1px solid #333;
+    padding-bottom: 10px;
+}
+
+.about-card ul {
+    list-style: none;
+}
+
+.about-card ul li {
+    font-size: 0.95rem;
+    color: #ccc;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 8px;
+}
+
+.about-card ul li strong {
+    color: #fff;
+}
+
+/* Skills Section Styling */
+.skills-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.skills-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.skills-subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    border-color: #007bff;
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skill-card p {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+/* Contact Section Styling */
+.contact-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.contact-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+.contact-info {
+    flex: 1;
+    min-width: 280px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.contact-info h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.contact-info > p {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.5;
+    margin-bottom: 25px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.info-item i {
+    font-size: 1.3rem;
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.1);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.info-item p {
+    font-size: 0.9rem;
+    color: #aaa;
+}
+
+.contact-form {
+    flex: 1.2;
+    min-width: 280px;
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 6px;
+    color: #fff;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #007bff;
+}
+
+.submit-btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+
+/* Projects Section Styling */
+.projects-section {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.3rem;
+    margin-bottom: 10px;
+}
+
+.projects-subtitle {
+    font-size: 1.1rem;
+    color: #aaa;
+    margin-bottom: 40px;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: left;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #007bff;
+}
+
+.project-info h3 {
+    font-size: 1.4rem;
+    color: #fff;
+    margin-bottom: 12px;
+}
+
+.project-info p {
+    font-size: 0.95rem;
+    color: #aaa;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.project-tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.project-tags span {
+    background-color: rgba(0, 123, 255, 0.1);
+    color: #007bff;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.project-links .btn-github {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #2a2a2a;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.project-links .btn-github:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Project Buttons Styling */
+.project-links {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.project-links .btn-github,
+.project-links .btn-live {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Code Button Style */
+.project-links .btn-github {
+    background-color: #2a2a2a;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+.project-links .btn-github:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Live Demo Button Style */
+.project-links .btn-live {
+    background-color: #007bff;
+    color: #fff;
+    border: 1px solid #007bff;
+}
+
+.project-links .btn-live:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Light Theme Variables */
+body.light-mode {
+    background-color: #f4f4f9;
+    color: #222;
+}
+
+body.light-mode header,
+body.light-mode nav {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Light Theme - Cards & Code Editor Fixes */
+body.light-mode .project-card,
+body.light-mode .skill-card,
+body.light-mode .about-box,
+body.light-mode .contact-box,
+body.light-mode .contact-form input,
+body.light-mode .contact-form textarea {
+    background-color: #ffffff;
+    color: #222;
+    border: 1px solid #d1d5db;
+}
+
+/* Code Editor Window Fix in Light Mode */
+body.light-mode .code-editor,
+body.light-mode [class*="developer"] {
+    background-color: #1e1e1e !important;
+    color: #fff;
+}
+
+body.light-mode .contact-form input::placeholder,
+body.light-mode .contact-form textarea::placeholder {
+    color: #888;
+}
+
+/* Light Mode - Perfect Text Visibility Fix */
+body.light-mode h1, 
+body.light-mode h2, 
+body.light-mode h3, 
+body.light-mode h4, 
+body.light-mode p, 
+body.light-mode span,
+body.light-mode li,
+body.light-mode a {
+    color: #222 !important;
+}
+
+body.light-mode .projects-subtitle,
+body.light-mode .skills-subtitle {
+    color: #555 !important;
+}
+
+/* Ensure card titles and text stay dark in light mode */
+body.light-mode .project-card h3,
+body.light-mode .project-card p,
+body.light-mode .skill-card h3,
+body.light-mode .skill-card p {
+    color: #222 !important;
+}
+
+/* Project Filter Buttons Styling */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 8px 18px;
+    border: 1px solid #444;
+    background-color: #2a2a2a;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Light Mode Support for Filter Buttons */
+body.light-mode .filter-btn {
+    background-color: #e5e7eb;
+    color: #222;
+    border-color: #d1d5db;
+}
+
+body.light-mode .filter-btn.active,
+body.light-mode .filter-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #007bff;
+}
+
+.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 3px;
+    width: 3px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}

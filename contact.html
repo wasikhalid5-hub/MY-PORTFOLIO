@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wasi | Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- ======HEADER\NAVIGATION BAR====== -->
+    <div class="header">
+        <div class="logo">WASI</div>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="theme-toggle" class="theme-btn">🌙</button>
+    </div>
+
+    <!-- ======MAIN====== -->
+    <main class="contact-section">
+        <div class="contact-container">
+            <h2>Get in <span class="highlight">Touch</span></h2>
+            <p class="contact-subtitle">Have a project in mind or want to collaborate? Feel free to reach out!</p>
+            
+            <div class="contact-wrapper">
+                <!-- Left Side: Contact Info -->
+                <div class="contact-info">
+                    <h3>Let's talk about everything!</h3>
+                    <p>Don't hesitate to drop a message. Whether you want to hire me for a freelance project or just say hi, my inbox is always open.</p>
+                    
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>wasikhalid@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Sindh, Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <i class="fas fa-briefcase"></i>
+                        <div>
+                            <h4>Freelance</h4>
+                            <p>Available on Fiverr</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: Contact Form -->
+                <form id="contactForm" class="contact-form">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="icon-input input-group">
+                        <input type="email" id="email" placeholder="Your Email" required>
+                    </div>
+                    <div class="input-group">
+                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send Message</button>
+                    <p id="formMessage" style="margin-top: 10px; font-weight: 500;"></p>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
