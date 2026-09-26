@@ -707,3 +707,48 @@ body.light-mode .filter-btn:hover {
     50% { opacity: 0; }
     100% { opacity: 1; }
 }
+
+
+
+
+
+
+
+
+/* ======MEDIA QUERIES====== */
+
+/* For Tablets (Max Width: 768px) */
+@media screen and (max-width: 768px) {
+    .container, 
+    header nav {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .hero-section {
+        text-align: center;
+        padding: 30px 15px;
+    }
+
+    /* Grid layouts ko single column karne ke liye */
+    .projects-grid, 
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* For Mobile Phones (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    .hero-section h1 {
+        font-size: 24px;
+    }
+
+    .btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
