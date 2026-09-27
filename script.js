@@ -57,7 +57,7 @@ if (filterBtns.length > 0 && projectCards.length > 0) {
 const typedTextSpan = document.querySelector(".typed-text");
 const cursorSpan = document.querySelector(".cursor");
 
-const textArray = ["Frontend Developer", "JavaScript Enthusiast", "UI/UX Coder", "Problem Solver"];
+const textArray = ["JavaScript Enthusiast", "Frontend Developer", ];
 const typingDelay = 100;
 const erasingDelay = 50;
 const newTextDelay = 2000; 
