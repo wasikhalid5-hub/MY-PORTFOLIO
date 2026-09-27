@@ -714,61 +714,386 @@ body.light-mode .filter-btn:hover {
 
 
 
+/* =========================================
+   RESPONSIVE DESIGN
+   Mobile → Tablet → Laptop → Desktop
+   ========================================= */
 
-/* ======MEDIA QUERIES====== */
 
-/* For Tablets (Max Width: 768px) */
-@media screen and (max-width: 768px) {
-    .container, 
-    header nav {
-        flex-direction: column;
-        padding: 15px;
+/* ================================
+   LARGE LAPTOP / DESKTOP
+   1200px and below
+   ================================ */
+
+@media (max-width: 1200px) {
+
+    .hero-container {
+        gap: 30px;
+        padding: 0 30px;
     }
 
-    .hero-section {
-        text-align: center;
-        padding: 30px 15px;
+    .hero-text {
+        max-width: 550px;
     }
 
-    .projects-grid, 
-    .skills-grid {
-        grid-template-columns: 1fr;
+    .code-box {
+        width: 450px;
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-container {
+        gap: 40px;
     }
 }
 
 
-/* For Mobile Phones (Max Width: 768px) */
-@media screen and (max-width: 768px) {
+/* ================================
+   TABLET
+   992px and below
+   ================================ */
+
+@media (max-width: 992px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 20px 30px;
+    }
+
+    .nav-links {
+        gap: 18px;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 50px;
+        padding: 70px 30px;
+    }
+
+    .hero-text {
+        max-width: 700px;
+    }
+
+    .hero-text h1 {
+        font-size: 48px;
+    }
+
+    .hero-text p {
+        font-size: 18px;
+    }
+
+    .code-box {
+        width: min(600px, 100%);
+        text-align: left;
+    }
+
+
+    /* ABOUT */
+
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+
+    /* CONTACT */
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+}
+
+
+/* ================================
+   MOBILE
+   768px and below
+   ================================ */
+
+@media (max-width: 768px) {
+
+    /* GENERAL */
+
+    * {
+        max-width: 100%;
+    }
+
     body {
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 70px 20px;
+    }
+
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-top: 15px;
+    }
+
+    .nav-links a {
         font-size: 14px;
     }
 
-    header nav, 
-    .hero-section {
+
+    /* HERO */
+
+    .hero-container {
+        width: 100%;
+        padding: 60px 20px;
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .hero-text {
+        width: 100%;
+    }
+
+    .hero-text h1 {
+        font-size: 40px;
+        line-height: 1.15;
+    }
+
+    .hero-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hero-buttons a,
+    .hero-buttons button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+
+    /* CODE BOX */
+
+    .code-box {
+        width: 100%;
+        max-width: 600px;
+        padding: 20px;
+        overflow-x: auto;
+        font-size: 14px;
+    }
+
+
+    /* ABOUT */
+
+    .about-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .nav-links {
-        margin-top: 15px;
-        gap: 10px;
+
+    /* SKILLS */
+
+    .skills-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+
+    /* PROJECT FILTER BUTTONS */
+
+    .filter-buttons {
+        display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        gap: 10px;
     }
 
-    .hero-section h1 {
-        font-size: 26px;
+
+    /* CONTACT */
+
+    .contact-container {
+        grid-template-columns: 1fr;
     }
 
-    .btn {
+    .contact-form {
         width: 100%;
-        margin-bottom: 10px;
     }
 
-    .developer-box, 
-    code {
-        max-width: 100%;
-        font-size: 11px;
-        overflow-x: auto;
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        box-sizing: border-box;
     }
+
+
+    /* FOOTER */
+
+    footer {
+        text-align: center;
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* ================================
+   SMALL MOBILE
+   480px and below
+   ================================ */
+
+@media (max-width: 480px) {
+
+    /* NAVBAR */
+
+    .navbar {
+        padding: 12px 15px;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+
+    .nav-links a {
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .hero-container {
+        padding: 50px 15px;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-text p {
+        font-size: 15px;
+    }
+
+
+    /* CODE */
+
+    .code-box {
+        padding: 15px;
+        font-size: 12px;
+    }
+
+
+    /* HEADINGS */
+
+    h2 {
+        font-size: 30px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 55px 15px;
+    }
+
+
+    /* PROJECTS */
+
+    .project-card {
+        padding: 18px;
+    }
+
+
+    /* BUTTONS */
+
+    .hero-buttons a,
+    .hero-buttons button {
+        max-width: 100%;
+    }
+
+}
+
+
+/* ================================
+   VERY SMALL PHONES
+   360px and below
+   ================================ */
+
+@media (max-width: 360px) {
+
+    .hero-text h1 {
+        font-size: 28px;
+    }
+
+    .hero-text p {
+        font-size: 14px;
+    }
+
+    .nav-links {
+        gap: 7px;
+    }
+
+    .nav-links a {
+        font-size: 12px;
+    }
+
+    .code-box {
+        font-size: 11px;
+        padding: 12px;
+    }
+
 }
